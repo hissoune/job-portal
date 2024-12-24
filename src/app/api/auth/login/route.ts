@@ -1,19 +1,34 @@
+import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { connectToDatabase } from "@/app/lib/db";
 import User from "@/app/models/User";
-import { comparePassword } from "@/app/lib/auth";
-import { generateToken } from "@/app/lib/auth";
-import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const { email, password } = await req.json();
 
-  await connectToDatabase();
-  const user = await User.findOne({ email });
+  try {
+    await connectToDatabase();
 
-  if (!user || !(await comparePassword(password, user.password))) {
-    return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
+    const user = await User.findOne({ email });
+    if (!user) {
+      return NextResponse.json({ error: "Invalid email or password" }, { status: 401 });
+    }
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) {
+      return NextResponse.json({ error: "Invalid email or password" }, { status: 401 });
+    }
+
+    const token = jwt.sign(
+      { id: user._id, email: user.email },
+      process.env.JWT_SECRET as string, 
+      { expiresIn: "1h" }
+    );
+
+    return NextResponse.json({ token }, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
-
-  const token = generateToken({ id: user._id, role: user.role });
-  return NextResponse.json({ token });
 }
