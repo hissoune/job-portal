@@ -1,22 +1,21 @@
-import { NextRequest, NextResponse } from "next/server";
-import jwt from "jsonwebtoken";
+import { NextResponse } from "next/server";
+import { verifyToken } from "./app/lib/auth";
 
-export function middleware(req: NextRequest) {
-  const token = req.cookies.get("token")?.value;
+export async function middleware(req: Request) {
+  const token = req.headers.get("Authorization")?.split(" ")[1];
 
   if (!token) {
     return NextResponse.redirect(new URL("/auth/login", req.url));
   }
 
   try {
-    jwt.verify(token, process.env.JWT_SECRET!);
-  } catch {
+    verifyToken(token);
+    return NextResponse.next();
+  } catch (error) {
     return NextResponse.redirect(new URL("/auth/login", req.url));
   }
-
-  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/applications/:path*", "/(admin)/:path*"],
+  matcher: ["/api/jobs/:path*", "/api/applications/:path*"],
 };
