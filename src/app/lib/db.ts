@@ -13,7 +13,6 @@ export async function connectToDatabase() {
     console.log("=> Using existing MongoDB connection");
     return;
   }
-
   try {
     const db = await mongoose.connect(MONGO_URI);
     isConnected = true;
