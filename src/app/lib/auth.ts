@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
-const JWT_SECRET = process.env.JWT_SECRET || "";
+const JWT_SECRET = process.env.JWT_SECRET || "hgjf";
 
 if (!JWT_SECRET) {
   throw new Error("Please define the JWT_SECRET environment variable inside .env.local");
@@ -11,9 +11,15 @@ export function generateToken(payload: object) {
   return jwt.sign(payload, JWT_SECRET, { expiresIn: "1000d" });
 }
 
-export  async  function verifyToken(token: string) {
-  const  decode = await jwt.verify(token, JWT_SECRET);
-  return decode;
+export async function verifyToken(token: string) {
+  
+  try {
+    const decode =  jwt.verify(token, JWT_SECRET);
+    return decode;
+  } catch (error) {
+    console.error("JWT verification error:");
+    throw error;
+  }
 }
 
 
