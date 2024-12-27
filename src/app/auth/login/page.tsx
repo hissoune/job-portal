@@ -24,8 +24,9 @@ export default function LoginPage() {
       const data = await res.json();
 
       if (res.ok) {
-        localStorage.setItem("token", data.token);
-        router.push("/dashboard"); // Redirect to the dashboard or another page
+        document.cookie = `token=${data.token}; path=/; Secure; HttpOnly; SameSite=Strict`;
+        
+        router.push("/dashboard");
       } else {
         setError(data.error);
       }
