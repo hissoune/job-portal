@@ -6,12 +6,11 @@ async function getJobs(page: number, limit: number, searchQuery: string) {
   const jsonData = fs.readFileSync(filePath, "utf8");
   const allJobs = JSON.parse(jsonData);
 
-  // Filter jobs by search query
+
   const filteredJobs = allJobs.filter((job: any) =>
     job.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Paginate the filtered jobs
   const offset = (page - 1) * limit;
   return filteredJobs.slice(offset, offset + limit);
 }
@@ -21,7 +20,6 @@ export default async function Dashboard({
 }: {
   searchParams: { page?: string; search?: string };
 }) {
-  // Get the page and search query from the URL search params
   const page = parseInt(searchParams?.page || "1");
   const searchQuery = searchParams?.search || "";
 
