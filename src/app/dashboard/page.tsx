@@ -23,7 +23,6 @@ export default async function Dashboard({
   const page = parseInt(searchParams?.page || "1");
   const searchQuery = searchParams?.search || "";
 
-  // Fetch jobs data (SSR happens here!)
   const jobs = await getJobs(page, 5, searchQuery);
 
   return (
@@ -33,11 +32,10 @@ export default async function Dashboard({
           Job Openings
         </h1>
         <p className="text-lg text-gray-600 mb-12 text-center">
-          Welcome to your account! Here are the latest job opportunities:
+          Welcome to your account! Here are the latest job opportunities: 
         </p>
 
         <div className="mb-6">
-          {/* Search functionality */}
           <form
             method="GET"
             action="/dashboard"
@@ -96,7 +94,6 @@ export default async function Dashboard({
           )}
         </div>
 
-        {/* Pagination */}
         <div className="text-center mt-6">
           <a
             href={`/dashboard?page=${page + 1}&search=${searchQuery}`}
