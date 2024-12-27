@@ -8,11 +8,12 @@ if (!JWT_SECRET) {
 }
 
 export function generateToken(payload: object) {
-  return jwt.sign(payload, JWT_SECRET, { expiresIn: "1d" });
+  return jwt.sign(payload, JWT_SECRET, { expiresIn: "1000d" });
 }
 
-export function verifyToken(token: string) {
-  return jwt.verify(token, JWT_SECRET);
+export  async  function verifyToken(token: string) {
+  const  decode = await jwt.verify(token, JWT_SECRET);
+  return decode;
 }
 
 
