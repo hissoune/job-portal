@@ -27,18 +27,18 @@ export async function POST(req: Request) {
       { expiresIn: "1h" }
     );
 
-    // Set the token in an HTTP-only cookie
+    
     const cookie = serialize("auth_token", token, {
-      httpOnly: true, // Ensures the cookie is not accessible via JavaScript
-      secure: process.env.NODE_ENV === "production", // Set to true in production
-      sameSite: "strict", // Helps protect against CSRF attacks
-      path: "/", // Makes the cookie available throughout the application
-      expires: new Date(Date.now() + 60 * 60 * 1000), // Token expiration set to 1 hour
+      httpOnly: true, 
+      secure: process.env.NODE_ENV === "production", 
+      sameSite: "strict", 
+      path: "/", 
+      expires: new Date(Date.now() + 60 * 60 * 1000), 
     });
 
-    // Send the cookie with the response
+    
     const response = NextResponse.json({ message: "Login successful" }, { status: 200 });
-    response.headers.set("Set-Cookie", cookie); // Set the cookie in the response header
+    response.headers.set("Set-Cookie", cookie); 
 
     return response;
   } catch (error) {

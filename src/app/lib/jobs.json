@@ -1,353 +1,355 @@
-[
-    {
-      "id": 1,
-      "title": "Software Engineer",
-      "company": "Company A",
-      "location": "Remote",
-      "description": "Description of job 1"
-    },
-    {
-      "id": 2,
-      "title": "Frontend Developer",
-      "company": "Company B",
-      "location": "San Francisco",
-      "description": "Description of job 2"
-    },
-    {
-      "id": 3,
-      "title": "Backend Developer",
-      "company": "Company C",
-      "location": "New York",
-      "description": "Description of job 3"
-    },
-    {
-      "id": 4,
-      "title": "Full Stack Developer",
-      "company": "Company D",
-      "location": "Los Angeles",
-      "description": "Description of job 4"
-    },
-    {
-      "id": 5,
-      "title": "Data Scientist",
-      "company": "Company E",
-      "location": "Chicago",
-      "description": "Description of job 5"
-    },
-    {
-      "id": 6,
-      "title": "Machine Learning Engineer",
-      "company": "Company F",
-      "location": "San Francisco",
-      "description": "Description of job 6"
-    },
-    {
-      "id": 7,
-      "title": "UX/UI Designer",
-      "company": "Company G",
-      "location": "Remote",
-      "description": "Description of job 7"
-    },
-    {
-      "id": 8,
-      "title": "Product Manager",
-      "company": "Company H",
-      "location": "Austin",
-      "description": "Description of job 8"
-    },
-    {
-      "id": 9,
-      "title": "DevOps Engineer",
-      "company": "Company I",
-      "location": "Seattle",
-      "description": "Description of job 9"
-    },
-    {
-      "id": 10,
-      "title": "Cybersecurity Analyst",
-      "company": "Company J",
-      "location": "Dallas",
-      "description": "Description of job 10"
-    },
-    {
-      "id": 11,
-      "title": "Cloud Engineer",
-      "company": "Company K",
-      "location": "San Francisco",
-      "description": "Description of job 11"
-    },
-    {
-      "id": 12,
-      "title": "Data Analyst",
-      "company": "Company L",
-      "location": "New York",
-      "description": "Description of job 12"
-    },
-    {
-      "id": 13,
-      "title": "Software Architect",
-      "company": "Company M",
-      "location": "Los Angeles",
-      "description": "Description of job 13"
-    },
-    {
-      "id": 14,
-      "title": "Blockchain Developer",
-      "company": "Company N",
-      "location": "Remote",
-      "description": "Description of job 14"
-    },
-    {
-      "id": 15,
-      "title": "QA Engineer",
-      "company": "Company O",
-      "location": "Chicago",
-      "description": "Description of job 15"
-    },
-    {
-      "id": 16,
-      "title": "Network Engineer",
-      "company": "Company P",
-      "location": "Austin",
-      "description": "Description of job 16"
-    },
-    {
-      "id": 17,
-      "title": "iOS Developer",
-      "company": "Company Q",
-      "location": "San Francisco",
-      "description": "Description of job 17"
-    },
-    {
-      "id": 18,
-      "title": "Android Developer",
-      "company": "Company R",
-      "location": "New York",
-      "description": "Description of job 18"
-    },
-    {
-      "id": 19,
-      "title": "Database Administrator",
-      "company": "Company S",
-      "location": "Seattle",
-      "description": "Description of job 19"
-    },
-    {
-      "id": 20,
-      "title": "Systems Administrator",
-      "company": "Company T",
-      "location": "Dallas",
-      "description": "Description of job 20"
-    },
-    {
-      "id": 21,
-      "title": "Game Developer",
-      "company": "Company U",
-      "location": "Los Angeles",
-      "description": "Description of job 21"
-    },
-    {
-      "id": 22,
-      "title": "Web Developer",
-      "company": "Company V",
-      "location": "San Francisco",
-      "description": "Description of job 22"
-    },
-    {
-      "id": 23,
-      "title": "Marketing Manager",
-      "company": "Company W",
-      "location": "Remote",
-      "description": "Description of job 23"
-    },
-    {
-      "id": 24,
-      "title": "Sales Engineer",
-      "company": "Company X",
-      "location": "Chicago",
-      "description": "Description of job 24"
-    },
-    {
-      "id": 25,
-      "title": "Customer Support Specialist",
-      "company": "Company Y",
-      "location": "Austin",
-      "description": "Description of job 25"
-    },
-    {
-      "id": 26,
-      "title": "HR Specialist",
-      "company": "Company Z",
-      "location": "New York",
-      "description": "Description of job 26"
-    },
-    {
-      "id": 27,
-      "title": "Business Analyst",
-      "company": "Company AA",
-      "location": "Remote",
-      "description": "Description of job 27"
-    },
-    {
-      "id": 28,
-      "title": "Operations Manager",
-      "company": "Company AB",
-      "location": "San Francisco",
-      "description": "Description of job 28"
-    },
-    {
-      "id": 29,
-      "title": "Legal Counsel",
-      "company": "Company AC",
-      "location": "Chicago",
-      "description": "Description of job 29"
-    },
-    {
-      "id": 30,
-      "title": "Financial Analyst",
-      "company": "Company AD",
-      "location": "Dallas",
-      "description": "Description of job 30"
-    },
-    {
-      "id": 31,
-      "title": "Public Relations Manager",
-      "company": "Company AE",
-      "location": "Seattle",
-      "description": "Description of job 31"
-    },
-    {
-      "id": 32,
-      "title": "Content Manager",
-      "company": "Company AF",
-      "location": "Los Angeles",
-      "description": "Description of job 32"
-    },
-    {
-      "id": 33,
-      "title": "SEO Specialist",
-      "company": "Company AG",
-      "location": "San Francisco",
-      "description": "Description of job 33"
-    },
-    {
-      "id": 34,
-      "title": "Social Media Manager",
-      "company": "Company AH",
-      "location": "Remote",
-      "description": "Description of job 34"
-    },
-    {
-      "id": 35,
-      "title": "Content Writer",
-      "company": "Company AI",
-      "location": "Chicago",
-      "description": "Description of job 35"
-    },
-    {
-      "id": 36,
-      "title": "Account Manager",
-      "company": "Company AJ",
-      "location": "Dallas",
-      "description": "Description of job 36"
-    },
-    {
-      "id": 37,
-      "title": "Project Manager",
-      "company": "Company AK",
-      "location": "Seattle",
-      "description": "Description of job 37"
-    },
-    {
-      "id": 38,
-      "title": "Supply Chain Manager",
-      "company": "Company AL",
-      "location": "Los Angeles",
-      "description": "Description of job 38"
-    },
-    {
-      "id": 39,
-      "title": "Architect",
-      "company": "Company AM",
-      "location": "New York",
-      "description": "Description of job 39"
-    },
-    {
-      "id": 40,
-      "title": "Product Designer",
-      "company": "Company AN",
-      "location": "San Francisco",
-      "description": "Description of job 40"
-    },
-    {
-      "id": 41,
-      "title": "Business Development Manager",
-      "company": "Company AO",
-      "location": "Remote",
-      "description": "Description of job 41"
-    },
-    {
-      "id": 42,
-      "title": "Operations Analyst",
-      "company": "Company AP",
-      "location": "Dallas",
-      "description": "Description of job 42"
-    },
-    {
-      "id": 43,
-      "title": "Investment Analyst",
-      "company": "Company AQ",
-      "location": "Chicago",
-      "description": "Description of job 43"
-    },
-    {
-      "id": 44,
-      "title": "Executive Assistant",
-      "company": "Company AR",
-      "location": "New York",
-      "description": "Description of job 44"
-    },
-    {
-      "id": 45,
-      "title": "Recruiter",
-      "company": "Company AS",
-      "location": "Los Angeles",
-      "description": "Description of job 45"
-    },
-    {
-      "id": 46,
-      "title": "Operations Coordinator",
-      "company": "Company AT",
-      "location": "San Francisco",
-      "description": "Description of job 46"
-    },
-    {
-      "id": 47,
-      "title": "Event Planner",
-      "company": "Company AU",
-      "location": "Austin",
-      "description": "Description of job 47"
-    },
-    {
-      "id": 48,
-      "title": "Sales Manager",
-      "company": "Company AV",
-      "location": "Remote",
-      "description": "Description of job 48"
-    },
-    {
-      "id": 49,
-      "title": "Customer Success Manager",
-      "company": "Company AW",
-      "location": "Seattle",
-      "description": "Description of job 49"
-    },
-    {
-      "id": 50,
-      "title": "Operations Director",
-      "company": "Company AX",
-      "location": "Chicago",
-      "description": "Description of job 50"
-    }
-  ]
+{
+    "jobs": [
+      {
+        "id": 1,
+        "title": "Software Engineer",
+        "company": "Company A",
+        "location": "Remote",
+        "description": "Description of job 1",
+        "salary": "$100,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job1.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Frontend Developer",
+        "company": "Company B",
+        "location": "San Francisco",
+        "description": "Description of job 2",
+        "salary": "$110,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job2.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Backend Developer",
+        "company": "Company C",
+        "location": "New York",
+        "description": "Description of job 3",
+        "salary": "$120,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job3.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Full Stack Developer",
+        "company": "Company D",
+        "location": "Los Angeles",
+        "description": "Description of job 4",
+        "salary": "$130,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job4.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Data Scientist",
+        "company": "Company E",
+        "location": "Chicago",
+        "description": "Description of job 5",
+        "salary": "$140,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job5.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Machine Learning Engineer",
+        "company": "Company F",
+        "location": "San Francisco",
+        "description": "Description of job 6",
+        "salary": "$150,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job6.jpg"
+      },
+      {
+        "id": 7,
+        "title": "UX/UI Designer",
+        "company": "Company G",
+        "location": "Remote",
+        "description": "Description of job 7",
+        "salary": "$95,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job7.jpg"
+      },
+      {
+        "id": 8,
+        "title": "Product Manager",
+        "company": "Company H",
+        "location": "Austin",
+        "description": "Description of job 8",
+        "salary": "$125,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job8.jpg"
+      },
+      {
+        "id": 9,
+        "title": "DevOps Engineer",
+        "company": "Company I",
+        "location": "Seattle",
+        "description": "Description of job 9",
+        "salary": "$110,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job9.jpg"
+      },
+      {
+        "id": 10,
+        "title": "Cybersecurity Analyst",
+        "company": "Company J",
+        "location": "Dallas",
+        "description": "Description of job 10",
+        "salary": "$105,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job10.jpg"
+      },
+      {
+        "id": 11,
+        "title": "Cloud Engineer",
+        "company": "Company K",
+        "location": "San Francisco",
+        "description": "Description of job 11",
+        "salary": "$120,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job11.jpg"
+      },
+      {
+        "id": 12,
+        "title": "Data Analyst",
+        "company": "Company L",
+        "location": "New York",
+        "description": "Description of job 12",
+        "salary": "$85,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job12.jpg"
+      },
+      {
+        "id": 13,
+        "title": "Software Architect",
+        "company": "Company M",
+        "location": "Los Angeles",
+        "description": "Description of job 13",
+        "salary": "$160,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job13.jpg"
+      },
+      {
+        "id": 14,
+        "title": "Blockchain Developer",
+        "company": "Company N",
+        "location": "Remote",
+        "description": "Description of job 14",
+        "salary": "$140,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job14.jpg"
+      },
+      {
+        "id": 15,
+        "title": "QA Engineer",
+        "company": "Company O",
+        "location": "Chicago",
+        "description": "Description of job 15",
+        "salary": "$90,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job15.jpg"
+      },
+      {
+        "id": 16,
+        "title": "Network Engineer",
+        "company": "Company P",
+        "location": "Austin",
+        "description": "Description of job 16",
+        "salary": "$105,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job16.jpg"
+      },
+      {
+        "id": 17,
+        "title": "iOS Developer",
+        "company": "Company Q",
+        "location": "San Francisco",
+        "description": "Description of job 17",
+        "salary": "$120,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job17.jpg"
+      },
+      {
+        "id": 18,
+        "title": "Android Developer",
+        "company": "Company R",
+        "location": "New York",
+        "description": "Description of job 18",
+        "salary": "$110,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job18.jpg"
+      },
+      {
+        "id": 19,
+        "title": "Database Administrator",
+        "company": "Company S",
+        "location": "Seattle",
+        "description": "Description of job 19",
+        "salary": "$115,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job19.jpg"
+      },
+      {
+        "id": 20,
+        "title": "Systems Administrator",
+        "company": "Company T",
+        "location": "Dallas",
+        "description": "Description of job 20",
+        "salary": "$100,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job20.jpg"
+      },
+      {
+        "id": 21,
+        "title": "Game Developer",
+        "company": "Company U",
+        "location": "Los Angeles",
+        "description": "Description of job 21",
+        "salary": "$130,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job21.jpg"
+      },
+      {
+        "id": 22,
+        "title": "Web Developer",
+        "company": "Company V",
+        "location": "San Francisco",
+        "description": "Description of job 22",
+        "salary": "$110,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job22.jpg"
+      },
+      {
+        "id": 23,
+        "title": "Marketing Manager",
+        "company": "Company W",
+        "location": "Remote",
+        "description": "Description of job 23",
+        "salary": "$95,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job23.jpg"
+      },
+      {
+        "id": 24,
+        "title": "Sales Engineer",
+        "company": "Company X",
+        "location": "Chicago",
+        "description": "Description of job 24",
+        "salary": "$105,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job24.jpg"
+      },
+      {
+        "id": 25,
+        "title": "Customer Support Specialist",
+        "company": "Company Y",
+        "location": "Austin",
+        "description": "Description of job 25",
+        "salary": "$75,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job25.jpg"
+      },
+      {
+        "id": 26,
+        "title": "HR Specialist",
+        "company": "Company Z",
+        "location": "New York",
+        "description": "Description of job 26",
+        "salary": "$80,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job26.jpg"
+      },
+      {
+        "id": 27,
+        "title": "Business Analyst",
+        "company": "Company AA",
+        "location": "Remote",
+        "description": "Description of job 27",
+        "salary": "$95,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job27.jpg"
+      },
+      {
+        "id": 28,
+        "title": "Operations Manager",
+        "company": "Company AB",
+        "location": "San Francisco",
+        "description": "Description of job 28",
+        "salary": "$120,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job28.jpg"
+      },
+      {
+        "id": 29,
+        "title": "Legal Counsel",
+        "company": "Company AC",
+        "location": "Chicago",
+        "description": "Description of job 29",
+        "salary": "$150,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job29.jpg"
+      },
+      {
+        "id": 30,
+        "title": "Financial Analyst",
+        "company": "Company AD",
+        "location": "Dallas",
+        "description": "Description of job 30",
+        "salary": "$100,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job30.jpg"
+      },
+      {
+        "id": 31,
+        "title": "Public Relations Manager",
+        "company": "Company AE",
+        "location": "Seattle",
+        "description": "Description of job 31",
+        "salary": "$105,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job31.jpg"
+      },
+      {
+        "id": 32,
+        "title": "Content Manager",
+        "company": "Company AF",
+        "location": "Los Angeles",
+        "description": "Description of job 32",
+        "salary": "$90,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job32.jpg"
+      },
+      {
+        "id": 33,
+        "title": "SEO Specialist",
+        "company": "Company AG",
+        "location": "San Francisco",
+        "description": "Description of job 33",
+        "salary": "$85,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job33.jpg"
+      },
+      {
+        "id": 34,
+        "title": "Social Media Manager",
+        "company": "Company AH",
+        "location": "Remote",
+        "description": "Description of job 34",
+        "salary": "$70,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job34.jpg"
+      },
+      {
+        "id": 35,
+        "title": "Video Editor",
+        "company": "Company AI",
+        "location": "Chicago",
+        "description": "Description of job 35",
+        "salary": "$80,000",
+        "date": "2024-12-30",
+        "image": "https://example.com/job35.jpg"
+      }
+    ]
+  }
   
