@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Job } from '../../types';
 
 interface JobListProps {
@@ -9,7 +10,7 @@ export default function JobList({ jobs }: JobListProps) {
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {jobs.length > 0 ? (
         jobs.map((job: Job) => (
-          <div
+          <Link href={`/jobs/${job.id}`}
             key={job.id}
             className="bg-gray-200 shadow-lg rounded-lg overflow-hidden border-2 border-transparent hover:border-indigo-500 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-indigo-300"
           >
@@ -29,14 +30,9 @@ export default function JobList({ jobs }: JobListProps) {
                 Date: {job.date}
               </p>
               <img src={job.image} alt={job.title} className="w-full h-40 object-cover mb-4" />
-              <a
-                href="#"
-                className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-full text-center hover:bg-indigo-600 transition duration-200 transform hover:scale-105"
-              >
-                Apply Now
-              </a>
+              
             </div>
-          </div>
+            </Link>
         ))
       ) : (
         <p className="text-gray-500">No jobs found for the selected filters.</p>

@@ -26,7 +26,7 @@ export default function LoginPage() {
       if (res.ok) {
         document.cookie = `token=${data.token}; path=/; Secure; HttpOnly; SameSite=Strict`;
         
-        router.push("/dashboard");
+        router.push("/jobs");
       } else {
         setError(data.error);
       }
