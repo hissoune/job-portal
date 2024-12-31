@@ -11,7 +11,7 @@ export default function JobList({ jobs }: JobListProps) {
         jobs.map((job: Job) => (
           <div
             key={job.id}
-            className="bg-white shadow-lg rounded-lg overflow-hidden border-2 border-transparent hover:border-indigo-500 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-indigo-300"
+            className="bg-gray-200 shadow-lg rounded-lg overflow-hidden border-2 border-transparent hover:border-indigo-500 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-indigo-300"
           >
             <div className="p-6 flex flex-col justify-between h-full">
               <h2 className="text-2xl font-semibold text-gray-800 mb-3 hover:text-indigo-600 transition duration-200">
@@ -28,7 +28,7 @@ export default function JobList({ jobs }: JobListProps) {
               <p className="text-gray-700 text-sm mb-4">
                 Date: {job.date}
               </p>
-              <img src={job.imageUrl} alt={job.title} className="w-full h-40 object-cover mb-4" />
+              <img src={job.image} alt={job.title} className="w-full h-40 object-cover mb-4" />
               <a
                 href="#"
                 className="inline-block bg-indigo-500 text-white px-6 py-3 rounded-full text-center hover:bg-indigo-600 transition duration-200 transform hover:scale-105"
