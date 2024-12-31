@@ -14,13 +14,13 @@ export default function Navbar() {
           </p>
         </Link>
         <div className="flex items-center gap-6">
-          <Link href="/auth/login">
+          <Link href="/login">
             <p className="flex items-center gap-2 text-gray-300 hover:text-teal-400 transition duration-300">
               <FaSignInAlt className="text-lg" />
               Login
             </p>
           </Link>
-          <Link href="/auth/register">
+          <Link href="/register">
             <p className="flex items-center gap-2 text-gray-300 hover:text-teal-400 transition duration-300">
               <FaUser className="text-lg" />
               Register
