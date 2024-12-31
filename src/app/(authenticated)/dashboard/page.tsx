@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import JobFilter from '../components/JobFilter';
-import JobList from '../components/JobList';
-import Pagination from '../components/Pagination';
+import JobFilter from '../../components/JobFilter';
+import JobList from '../../components/JobList';
+import Pagination from '../../components/Pagination';
 
 interface Job {
   id: string;
@@ -88,7 +88,7 @@ export default async function Dashboard({ searchParams }: DashboardProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 p-20 flex">
+    <div className="min-h-screen bg-gradient-to-r from-indigo-300 to-purple-300 p-20 flex">
       <aside className="w-1/4 bg-white shadow-xl rounded-lg p-6 mr-8 h-fit">
         <JobFilter initialValues={searchParams} />
       </aside>
