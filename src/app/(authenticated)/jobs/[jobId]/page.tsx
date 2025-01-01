@@ -36,7 +36,7 @@ export default async function JobDetails({ params }: { params: { jobId: string }
     <div className="min-h-screen bg-gradient-to-r from-indigo-300 to-purple-300 p-8 md:p-20">
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
         <div className="p-8">
-          <Link href="/" className="text-indigo-600 hover:text-indigo-800 mb-4 inline-block">
+          <Link href="/jobs" className="text-indigo-600 hover:text-indigo-800 mb-4 inline-block">
             &larr; Back to Job Listings
           </Link>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6">

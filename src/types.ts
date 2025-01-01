@@ -6,7 +6,7 @@ export interface Job {
     description: string;
     salary: number;
     date: string;
-    imageUrl: string;
+    image: string;
   }
   
   
