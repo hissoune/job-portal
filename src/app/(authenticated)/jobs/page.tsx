@@ -1,18 +1,9 @@
-import Link from 'next/link';
 import JobFilter from '../../components/JobFilter';
 import JobList from '../../components/JobList';
 import Pagination from '../../components/Pagination';
+import { Job } from '../../../types';
 
-interface Job {
-  id: string;
-  title: string;
-  company: string;
-  location: string;
-  description: string;
-  salary: number;
-  date: string;
-  imageUrl: string; 
-}
+
 
 interface DashboardProps {
   searchParams: {
