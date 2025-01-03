@@ -1,4 +1,4 @@
-"use client"; // Add this directive at the top of your file
+"use client"; 
 import { useRouter } from "next/navigation";
 import React, { use, useEffect, useState } from "react";
 import Link from "next/link";
