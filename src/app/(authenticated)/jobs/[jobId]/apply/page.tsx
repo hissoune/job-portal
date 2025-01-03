@@ -8,7 +8,7 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
   const router = useRouter();
   const { jobId } = use(params);
 
-  const [user, setUser] = useState({id:"", name: "", email: "" }); // Initialize with default empty values
+  const [user, setUser] = useState({id:"", name: "", email: "" }); 
   const [note, setNote] = useState("");
   const [resume, setResume] = useState<File | null>(null);
 
@@ -35,15 +35,14 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
     formData.append("note", note);
     if (resume) formData.append("resume", resume);
   
-    // Log the FormData key-value pairs
     for (let [key, value] of formData.entries()) {
-      console.log(`${key}:`, value); // This ensures you see what is being sent
+      console.log(`${key}:`, value); 
     }
   
     try {
       const res = await fetch("http://localhost:3000/api/application/create", {
         method: "POST",
-        body: formData, // Use the FormData instance directly
+        body: formData,
       });
   
       if (!res.ok) {
@@ -110,7 +109,7 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
                 type="email"
                 id="email"
                 name="email"
-                value={user.email} // Controlled input
+                value={user.email} 
                 readOnly
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100"
               />
@@ -126,7 +125,7 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
                 type="text"
                 id="jobTitle"
                 name="jobTitle"
-                value={jobId} // Controlled input
+                value={jobId} 
                 readOnly
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-gray-100"
               />
@@ -141,8 +140,8 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
               <textarea
                 id="note"
                 name="note"
-                value={note} // Controlled input
-                onChange={(e) => setNote(e.target.value)} // Update state on input change
+                value={note} 
+                onChange={(e) => setNote(e.target.value)} 
                 placeholder="Write your note here..."
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
               ></textarea>
@@ -158,7 +157,7 @@ export default function ApplyJob({ params }: { params: Promise<{ jobId: string }
                 type="file"
                 id="resume"
                 name="resume"
-                onChange={(e) => setResume(e.target.files ? e.target.files[0] : null)} // Handle file upload
+                onChange={(e) => setResume(e.target.files ? e.target.files[0] : null)} 
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm"
               />
