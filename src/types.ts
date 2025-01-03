@@ -18,4 +18,16 @@ export interface Job {
     email:string
   }
   
+
+  export interface  Application{
+
+    _id:string,
+    user:User,
+    jobTitle:string,
+    status:string,
+    note:string,
+    resume:string
+    created_at:Date
+    
+  }
   
