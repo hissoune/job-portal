@@ -7,13 +7,17 @@ import Link from 'next/link';
 
 interface ApplicationListProps {
   initialApplications: Application[];
+  cancelAplication:any
 }
 
-export default function ApplicationList({ initialApplications }: ApplicationListProps) {
+export default  function ApplicationList({cancelAplication, initialApplications }: ApplicationListProps) {
     const [applications, setApplications] = useState(initialApplications);
   
-    const handleDelete = (id: string) => {
-      setApplications(applications.filter(app => app._id !== id));
+    const handleDelete =async (id: string) => {
+       await cancelAplication(id);
+
+       setApplications(applications.filter(app => app._id !== id));
+
     };
   
     const getStatusColor = (status: Application['status']) => {
