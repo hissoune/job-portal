@@ -16,6 +16,23 @@ async function getUserApplications(userId: string): Promise<Application[]> {
   }
 }
 
+async function cancelAplication(AplicationId:string) {
+    "use server"
+  
+    try{
+    const res = await fetch(`http://localhost:3000/api/application/cancel?AplicationId=${AplicationId}`, {
+        method:"delete",
+        cache: "no-store",
+      });
+      if (!res.ok) throw new Error("Failed to deleting applications");
+      return await res.json();
+    } catch (error) {
+      console.error("Error deleting applications:", error);
+      return error;
+    }
+    
+}
+
 export default async function ApplicationsPage() {
   const userDataCookie = (await cookies()).get("user_data");
   const userData = userDataCookie ? JSON.parse(userDataCookie.value) : null;
@@ -33,7 +50,7 @@ export default async function ApplicationsPage() {
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold mb-6">My Job Applications</h1>
       <Suspense fallback={<div>Loading applications...</div>}>
-        <ApplicationList initialApplications={applications} />
+        <ApplicationList cancelAplication={cancelAplication} initialApplications={applications} />
       </Suspense>
     </div>
   );
