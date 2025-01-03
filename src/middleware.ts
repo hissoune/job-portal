@@ -33,7 +33,7 @@ export const config = {
   matcher: [
     "/jobs",
     "/api/protected-endpoint",
-    "/auth/login",
-    "/auth/register",
+    "/login",
+    "/register",
   ],
 };
