@@ -1,10 +1,11 @@
 import { cookies } from "next/headers";
 import Link from "next/link";
-import { Application } from "../../types";
-
+import {Application} from '@/types'
+import { Suspense } from "react";
+import ApplicationList from "@/app/components/ApplicationList";
 async function getUserApplications(userId: string): Promise<Application[]> {
   try {
-    const res = await fetch(`http://localhost:3001/applications?userId=${userId}`, {
+    const res = await fetch(`http://localhost:3000/api/application/get?userId=${userId}`, {
       cache: "no-store",
     });
     if (!res.ok) throw new Error("Failed to fetch applications");
@@ -16,7 +17,7 @@ async function getUserApplications(userId: string): Promise<Application[]> {
 }
 
 export default async function ApplicationsPage() {
-  const userDataCookie = cookies().get("user_data");
+  const userDataCookie = (await cookies()).get("user_data");
   const userData = userDataCookie ? JSON.parse(userDataCookie.value) : null;
 
   if (!userData) {
@@ -28,34 +29,12 @@ export default async function ApplicationsPage() {
   }
 
   const applications = await getUserApplications(userData.id);
-
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-2xl font-bold mb-6">Your Applications</h1>
-        {applications.length > 0 ? (
-          <ul className="space-y-4">
-            {applications.map((app) => (
-              <li
-                key={app.id}
-                className="p-4 border rounded-lg shadow-sm bg-gray-50 hover:bg-gray-100"
-              >
-                <h2 className="text-xl font-semibold">{app.jobTitle}</h2>
-                <p>Company: {app.company}</p>
-                <p>Status: {app.status || "Pending"}</p>
-                <Link
-                  href={`/applications/${app.id}`}
-                  className="text-indigo-600 hover:underline"
-                >
-                  View Details
-                </Link>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>You have not submitted any applications yet.</p>
-        )}
-      </div>
+    <div className="container mx-auto py-8 px-4">
+      <h1 className="text-3xl font-bold mb-6">My Job Applications</h1>
+      <Suspense fallback={<div>Loading applications...</div>}>
+        <ApplicationList initialApplications={applications} />
+      </Suspense>
     </div>
   );
 }
