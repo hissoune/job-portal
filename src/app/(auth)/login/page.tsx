@@ -25,8 +25,16 @@ export default function LoginPage() {
 
       if (res.ok) {
         document.cookie = `token=${data.token}; path=/; Secure; HttpOnly; SameSite=Strict`;
-        
-        router.push("/jobs");
+        if (data.role == "hr") {
+          router.push("/dashboard");
+
+        }else if(data.role == "condidat"){
+          router.push("/jobs");
+
+        }else {
+          router.push("/");
+
+        }
       } else {
         setError(data.error);
       }
