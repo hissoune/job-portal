@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { Home, Users, FileText, Settings } from 'lucide-react'
 
 const navItems = [
-  { name: 'Dashboard', href: '/admin', icon: Home },
-  { name: 'Applicants', href: '/admin/applicants', icon: Users },
-  { name: 'Jobs', href: '/admin/jobs', icon: FileText },
-  { name: 'Settings', href: '/admin/settings', icon: Settings },
+  { name: 'Dashboard', href: '/dashboard', icon: Home },
+  { name: 'Applicants', href: '/dashboard/applicants', icon: Users },
+  { name: 'Jobs', href: '/dashboard/jobs', icon: FileText },
+  { name: 'Settings', href: '/dashboard/settings', icon: Settings },
 ]
 
 export function Sidebar() {
