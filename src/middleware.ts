@@ -20,11 +20,22 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
+  const decode = await verifyToken(token);
+
   if (unauthRoutes.some((route) => req.nextUrl.pathname.startsWith(route)) && token) {
-    return NextResponse.redirect(new URL("/jobs", req.url));
+   if (decode.role == "hr") {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
+
+   }else if (decode.role == "condidat") {
+        return NextResponse.redirect(new URL("/jobs", req.url));
+
+   }else {
+    return NextResponse.redirect(new URL("/", req.url));
+
+   }
   }
 
-  const decode = await verifyToken(token);
+ 
  
   if (hrRoutes.some((route) => req.nextUrl.pathname.startsWith(route)) && decode.role != "hr") {
     return NextResponse.redirect(new URL("/unauthorized", req.url));

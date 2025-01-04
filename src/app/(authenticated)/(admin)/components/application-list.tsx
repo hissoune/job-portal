@@ -46,14 +46,15 @@ import { Application } from '@/types'
 
 interface ApplicationListProps {
     applications: Application[];
+    updateStatus: (applicationId: string, status: string) => Promise<{msg:string,application:Application}>;
    
   }
 
-export function ApplicationList({applications}:ApplicationListProps) {
+export function ApplicationList({applications,updateStatus}:ApplicationListProps) {
   return (
     <div className="space-y-4">
       {applications.map((application) => (
-        <ApplicationCard key={application._id} application={application} />
+        <ApplicationCard key={application._id}  application={application} updateStatus={updateStatus} />
       ))}
     </div>
   )
