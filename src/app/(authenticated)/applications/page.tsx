@@ -1,8 +1,9 @@
 import { cookies } from "next/headers";
-import Link from "next/link";
 import {Application} from '@/types'
 import { Suspense } from "react";
 import ApplicationList from "@/app/components/ApplicationList";
+
+
 async function getUserApplications(userId: string): Promise<Application[]> {
   try {
     const res = await fetch(`http://localhost:3000/api/application/get?userId=${userId}`, {

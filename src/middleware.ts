@@ -7,6 +7,10 @@ export async function middleware(req: NextRequest) {
   const token = req.cookies.get("auth_token")?.value;
 
   const unauthRoutes = ["/login", "/register"];
+   const hrRoutes = ["/dashboard"];
+   const condidatRoutes = ["/jobs","/jobs/[jobId]",
+    "/jobs/[jobId]/aply",
+    "/applications"]
 
   if (unauthRoutes.some((route) => req.nextUrl.pathname.startsWith(route)) && !token) {
     return NextResponse.next();
@@ -21,7 +25,14 @@ export async function middleware(req: NextRequest) {
   }
 
   const decode = await verifyToken(token);
+ 
+  if (hrRoutes.some((route) => req.nextUrl.pathname.startsWith(route)) && decode.role != "hr") {
+    return NextResponse.redirect(new URL("/unauthorized", req.url));
+  }
 
+  if (condidatRoutes.some((route) => req.nextUrl.pathname.startsWith(route)) && decode.role != "condidat") {
+    return NextResponse.redirect(new URL("/unauthorized", req.url));
+  }
   req.user = decode;
   const response = NextResponse.next();
   response.cookies.set("user_data", JSON.stringify(decode));
@@ -32,6 +43,10 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     "/jobs",
+    "/jobs/[jobId]",
+    "/jobs/[jobId]/aply",
+    "/applications",
+    "/dashboard",
     "/api/protected-endpoint",
     "/login",
     "/register",
