@@ -37,7 +37,7 @@ export async function POST(req: Request) {
     });
 
     
-    const response = NextResponse.json({ message: "Login successful" }, { status: 200 });
+    const response = NextResponse.json({role:user.role}, { status: 200 });
     response.headers.set("Set-Cookie", cookie); 
 
     return response;

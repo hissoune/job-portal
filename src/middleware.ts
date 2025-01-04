@@ -58,7 +58,7 @@ export const config = {
     "/jobs/[jobId]/aply",
     "/applications",
     "/dashboard",
-    "/api/protected-endpoint",
+    "/dashboard/applicants",
     "/login",
     "/register",
   ],
