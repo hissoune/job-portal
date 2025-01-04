@@ -27,7 +27,7 @@ export interface Job {
     status:string,
     note:string,
     resume:string
-    created_at:Date
+    created_at:string
     
   }
   
