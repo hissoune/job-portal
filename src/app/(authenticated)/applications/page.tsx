@@ -48,10 +48,11 @@ export default async function ApplicationsPage() {
   const applications = await getUserApplications(userData.id);
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">My Job Applications</h1>
-      <Suspense fallback={<div>Loading applications...</div>}>
+      <h1 className=" text-center text-3xl font-bold mb-6">My Job Applications</h1>
+        <Suspense fallback={<div>Loading applications...</div>}>
         <ApplicationList cancelAplication={cancelAplication} initialApplications={applications} />
       </Suspense>
+      
     </div>
   );
 }
