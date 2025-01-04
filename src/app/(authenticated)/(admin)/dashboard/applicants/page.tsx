@@ -21,6 +21,29 @@ async function getApplications(): Promise<Application[]>{
   }
 
 }
+async  function updateStatus(ApplicationId:string,status:string){
+    'use server'
+    
+    try {
+        const res = await fetch(`http://localhost:3000/api/application/updatestaus?AplicationId=${ApplicationId}`, {
+          method:"PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+    
+          body: JSON.stringify({ status }),
+        });
+    
+        if (!res.ok) throw new Error("Failed to update applications");
+    
+        return await res.json();
+    
+      } catch (error) {
+        console.error("Error updating applications:", error);
+        return [];
+      }
+}
+
 export default async function ApplicationsPage() {
 
     const applications = await getApplications();
@@ -33,7 +56,7 @@ export default async function ApplicationsPage() {
           <ApplicationFilters />
         </div>
         <div className="w-full md:w-3/4">
-          <ApplicationList applications={applications} />
+          <ApplicationList applications={applications} updateStatus={updateStatus} />
         </div>
       </div>
     </div>
