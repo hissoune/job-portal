@@ -9,13 +9,16 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "start:all": "concurrently \"npm run server\" \"npm run dev\""
+
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.5.1",
+    "concurrently": "^9.1.2",
     "cookie": "^1.0.2",
     "formidable": "^3.5.2",
     "framer-motion": "^11.15.0",
