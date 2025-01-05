@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongo:27017/nextjs-app-db 
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - mongo 
+
+  json-server:
+    image: node:18-alpine
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3001:3001"
+    command: sh -c "npm install && npm run server"
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: nextjs-app-db
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
