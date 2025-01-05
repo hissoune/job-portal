@@ -19,7 +19,7 @@ export default function AuthenticatedLayout({
  <div>
 
   <div className="fcs">
-                  { <Navbar  />}
+       { <Navbar  />}
 
         </div>
         {children}
